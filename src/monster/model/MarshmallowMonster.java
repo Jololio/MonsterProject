@@ -68,4 +68,35 @@ public class MarshmallowMonster
 		return antennaCount;
 	}
 	
+	public void setName(String name)
+	{
+		this.name = name;
+	}
+	
+	public void setAntenna(double antenna)
+	{
+		this.antennaCount = antenna;
+	}
+	
+	public void setNose(int nose)
+	{
+		this.noseCount = nose;
+	}
+	
+	public void setLegs(int legs)
+	{
+		this.legCount = legs;
+	}
+	
+	public void setBellyButton(boolean bellyButton)
+	{
+		this.hasBellyButton = bellyButton;
+	}
+	
+	public void setEyes(int eyes)
+	{
+		this.eyeCount = eyes;
+	}
+	
 }
+
