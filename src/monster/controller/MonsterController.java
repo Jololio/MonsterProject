@@ -40,7 +40,6 @@ public class MonsterController
 		}
 		
 		System.out.println("Monster name is now" + firstMonster);
-		
 		keyboardInput.nextLine();
 		
 		System.out.println("Would you like to change my amount of eyes?");
@@ -59,6 +58,41 @@ public class MonsterController
 		
 		
 		System.out.println("I now have " + firstMonster.getEyeCount() + " eyes.");
+		keyboardInput.nextLine();
+		
+		System.out.println("Would you like to change my amount of legs?");
+		String legAnswer = keyboardInput.nextLine();
+		
+		if (legAnswer.equalsIgnoreCase("yes"))
+		{
+			System.out.println("How many legs do I have?");
+			int newLegs = keyboardInput.nextInt();
+			firstMonster.setLegs(newLegs);
+		}
+		else
+		{
+			System.out.println("Legs remain unchanged");
+		}
+		
+		System.out.println("I now have " + firstMonster.getLegCount() + " legs.");
+		keyboardInput.nextLine();
+		
+		System.out.println("Would you like to change my nose count?");
+		String noseAnswer = keyboardInput.nextLine();
+		
+		if(noseAnswer.equalsIgnoreCase("yes"))
+		{
+			System.out.println("How many noses do I have?");
+			int newNose = keyboardInput.nextInt();
+			firstMonster.setNose(newNose);
+		}
+		else
+		{
+			System.out.println("Nose count remains unchanged");
+		}
+		
+		System.out.println("I now have " + firstMonster.getNoseCount() + " noses.");
+		keyboardInput.nextLine();		
 	}
 }
 
