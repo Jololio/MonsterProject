@@ -1,6 +1,7 @@
 package monster.controller;
 
 import monster.model.MarshmallowMonster;
+
 import java.util.Scanner;
 
 public class MonsterController 
@@ -17,7 +18,7 @@ public class MonsterController
 	public void start()
 	{
 		System.out.println("We made monsters today!");
-		System.out.println("Here is mine " + firstMonster);
+		System.out.println("I am a monster." + firstMonster);
 		System.out.println("My monster has this many legs " + firstMonster.getLegCount());
 		System.out.println("My monster has this many eyes " + firstMonster.getEyeCount());
 		System.out.println("My monster has this many noses " + firstMonster.getNoseCount());
@@ -26,7 +27,38 @@ public class MonsterController
 		
 		System.out.println("Would you like to change my name?");
 		String answer = keyboardInput.nextLine();
+		
+		if (answer.equalsIgnoreCase("yes"))
+		{
+			System.out.println("What do you like the name to be?");
+			String newName = keyboardInput.nextLine();
+			firstMonster.setName(newName);
+		}
+		else
+		{
+			System.out.println("My name shall remain the same.");
+		}
+		
+		System.out.println("Monster name is now" + firstMonster);
+		
+		keyboardInput.nextLine();
+		
+		System.out.println("Would you like to change my amount of eyes?");
+		String eyeAnswer = keyboardInput.nextLine();
+		
+		if (eyeAnswer.equalsIgnoreCase("yes"))
+		{
+			System.out.println("How many eyes do I have?");
+			int newEyes = keyboardInput.nextInt();
+			firstMonster.setEyes(newEyes);
+		}
+		else
+		{
+			System.out.println("Eyes left unchanged.");
+		}
+		
+		
+		System.out.println("I now have " + firstMonster.getEyeCount() + " eyes.");
 	}
-	
-	
 }
+
